@@ -49,12 +49,11 @@ graficar_campo <- function(campo) {
 #------------------------------------------------------------------------------
 #------------------------------------------------------------------------------
 # Aqui comienza el programa
-setwd("~/buckets/b1/") # Establezco el Working Directory
+setwd("D:/Usuario/Desktop/Maestria CIENCIA DE DATOS/Data mining - sept 2023") # Establezco el Working Directory
 
 # cargo el dataset donde voy a entrenar
-dataset <- fread("./datasets/dataset_pequeno.csv")
-
-dir.create("./exp/", showWarnings = FALSE)
+dataset <- fread("D:/Usuario/Desktop/Maestria CIENCIA DE DATOS/Data mining - sept 2023/datasets/dataset_pequeno.csv") # nolint
+dir.create("D./exp/", showWarnings = FALSE) # nolint
 dir.create("./exp/DR3610/", showWarnings = FALSE)
 setwd("./exp/DR3610/")
 
@@ -97,3 +96,4 @@ for (campo in campos_buenos) {
 }
 
 dev.off()
+

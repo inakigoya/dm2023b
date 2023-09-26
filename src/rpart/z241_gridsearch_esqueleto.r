@@ -11,7 +11,7 @@ require("parallel")
 
 PARAM <- list()
 # reemplazar por las propias semillas
-PARAM$semillas <- c(102191, 200177, 410551, 552581, 892237)
+ksemillas <- c(794471, 794473, 794477, 794483, 794491)
 
 #------------------------------------------------------------------------------
 # particionar agrega una columna llamada fold a un dataset
@@ -89,7 +89,7 @@ ArbolesMontecarlo <- function(semillas, param_basicos) {
 #------------------------------------------------------------------------------
 
 # Aqui se debe poner la carpeta de la computadora local
-setwd("X:\\gdrive\\ITBA2023B\\") # Establezco el Working Directory
+setwd("D:/Usuario/Desktop/Maestria CIENCIA DE DATOS/Data mining - sept 2023") # Establezco el Working Directory
 # cargo los datos
 
 # cargo los datos
@@ -103,7 +103,7 @@ dataset <- dataset[clase_ternaria != ""]
 # HT  representa  Hiperparameter Tuning
 dir.create("./exp/", showWarnings = FALSE)
 dir.create("./exp/HT2020/", showWarnings = FALSE)
-archivo_salida <- "./exp/HT2020/gridsearch.txt"
+archivo_salida <- "./exp/HT2020/gridsearch1.txt"
 
 # Escribo los titulos al archivo donde van a quedar los resultados
 # atencion que si ya existe el archivo, esta instruccion LO SOBREESCRIBE,
@@ -146,3 +146,4 @@ for (vmax_depth in c(4, 6, 8, 10, 12, 14)) {
     )
   }
 }
+

@@ -7,7 +7,8 @@ require("rpart")
 require("rpart.plot")
 
 # Aqui se debe poner la carpeta de la materia de SU computadora local
-setwd("X:\\gdrive\\ITBA2023B\\") # Establezco el Working Directory
+getwd()
+setwd("D:/Usuario/Desktop/Maestria CIENCIA DE DATOS/Data mining - sept 2023") # Establezco el Working Directory
 
 # cargo el dataset
 dataset <- fread("./datasets/dataset_pequeno.csv")
@@ -63,3 +64,4 @@ fwrite(dapply[, list(numero_de_cliente, Predicted)],
         file = "./exp/KA2001/K101_001.csv",
         sep = ","
 )
+

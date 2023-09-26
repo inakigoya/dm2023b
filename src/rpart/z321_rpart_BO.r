@@ -30,7 +30,7 @@ hs <- makeParamSet(
 )
 # minbuket NO PUEDE ser mayor que la mitad de minsplit
 
-ksemilla_azar <- 102191 # cambiar por la primer semilla
+ksemilla_azar <- 794471 # cambiar por la primer semilla
 
 #------------------------------------------------------------------------------
 # graba a un archivo los componentes de lista
@@ -135,7 +135,7 @@ ArbolesCrossValidation <- function(data, param, qfolds, pagrupa, semilla) {
     seq(qfolds), # 1 2 3 4 5
     MoreArgs = list(data, param),
     SIMPLIFY = FALSE,
-    mc.cores = qfolds
+    mc.cores = 1
   )
 
   data[, fold := NULL]
@@ -179,7 +179,7 @@ EstimarGanancia <- function(x) {
 # Aqui empieza el programa
 
 # Establezco el Working Directory
-setwd("~/buckets/b1/")
+setwd("D:/Usuario/Desktop/Maestria CIENCIA DE DATOS/Data mining - sept 2023")
 
 # cargo los datos
 dataset <- fread("./datasets/dataset_pequeno.csv")
@@ -254,8 +254,9 @@ if (!file.exists(archivo_BO)) {
 # retomo en caso que ya exista
 
 # creo la carpeta del experimento en el bucket
-dir.create("~/buckets/b1/exp/", showWarnings = FALSE)
-dir.create("~/buckets/b1/exp/HT3210/", showWarnings = FALSE)
+dir.create("D:/Usuario/Desktop/Maestria CIENCIA DE DATOS/Data mining - sept 2023/b1/exp/", showWarnings = FALSE)
+dir.create("D:/Usuario/Desktop/Maestria CIENCIA DE DATOS/Data mining - sept 2023/b1/exp/HT3210/", showWarnings = FALSE)
 
 # copio los archivos
-system( "cp -r ~/exp/HT3210/*  ~/buckets/b1/exp/HT3210" )
+system( "cp -r ~/exp/HT3210/*  D:/Usuario/Desktop/Maestria CIENCIA DE DATOS/Data mining - sept 2023/b1/exp/HT3210" )
+
